@@ -118,4 +118,5 @@ Feedstock Maintainers
 =====================
 
 * [@leouieda](https://github.com/leouieda/)
+* [@tonybaloney](https://github.com/tonybaloney/)
 
