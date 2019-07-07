@@ -1,5 +1,5 @@
 {% set name = "pytest-azurepipelines" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21b70d4283f2ccae06fdb7d461ec4652592b83c7e9978515491e0262d3cdfd0c
+  sha256: 944ae2c0790b792d123aa7312fe307bc35214dd26531728923ae5085a1d1feab
 
 build:
   noarch: python
