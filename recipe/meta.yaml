@@ -18,9 +18,12 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - pytest
+    - setuptools
+    - pytest-nunit
 
 test:
   imports:
