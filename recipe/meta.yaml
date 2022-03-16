@@ -1,5 +1,5 @@
 {% set name = "pytest-azurepipelines" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest-azurepipelines-{{ version }}.tar.gz
-  sha256: 6f4246edbc13ef2a7f4584365289bc81a42618a00405582d0ce846e0a8ac60a0
+  sha256: 225573ae479cb8f25d84b8d51c7e2bb037f9e89f35bf2950baad0b2385069506
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ test:
   imports:
     - pytest_azurepipelines
   commands:
-    - "py.test --traceconfig | grep pytest-azurepipelines-{{ version }}"
+    - py.test --traceconfig | grep pytest-azurepipelines-{{ version }}
     - pip check
   requires:
     - pip
