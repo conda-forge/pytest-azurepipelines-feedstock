@@ -20,7 +20,8 @@ requirements:
     - python >=3.5
   run:
     - pytest >=5.0.0
-    - pytest-nunit >=0.6.0
+    - pytest-nunit >=1.0.0
+    - importlib-resources
     - python >=3.5
 
 test:
