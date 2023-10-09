@@ -1,11 +1,11 @@
-About pytest-azurepipelines
-===========================
+About pytest-azurepipelines-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-azurepipelines-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tonybaloney/pytest-azurepipelines
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-azurepipelines-feedstock/blob/main/LICENSE.txt)
 
 Summary: Formatting PyTest output for Azure Pipelines UI
 
