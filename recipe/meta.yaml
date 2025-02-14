@@ -6,32 +6,34 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest-azurepipelines-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytest-azurepipelines-{{ version }}.tar.gz
   sha256: fd08f089bca0fad3c2b6fde9dbea69b975492ffaa8cb637cc987e64af8c18b9c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
+    - setuptools
   run:
     - pytest >=5.0.0
     - pytest-nunit >=1.0.0
     - importlib-resources
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - pytest_azurepipelines
   commands:
-    - py.test --traceconfig | grep pytest-azurepipelines-{{ version }}
     - pip check
-  requires:
-    - pip
+    - py.test --traceconfig | grep pytest-azurepipelines-{{ version }}
 
 about:
   home: https://github.com/tonybaloney/pytest-azurepipelines
